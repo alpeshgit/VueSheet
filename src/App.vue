@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div v-if="loaded" class="board p-4">
+    <div v-if="loaded" class="board w-full p-4">
       <div class="row flex bg-green-400">
         <div class="w-8"></div>
         <div
@@ -13,7 +13,7 @@
       </div>
       <div v-for="row in rows" :key="row" class="flex">
         <div class="w-8 text-center bg-green-400">{{ row }}</div>
-        <div v-for="col in cols" :key="col" class="flex bg-green-400">
+        <div v-for="col in cols" :key="col" class="flex flex-grow bg-green-400">
           <Cell
             :x="col"
             :y="row"
